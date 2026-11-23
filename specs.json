@@ -24,7 +24,7 @@
     "2. Draw the student photo 'object-fit: cover' into frame.photo (x,y,width,height), clipped to a rounded rect of frame.photo.radius.",
     "3. Draw the overlay PNG at 0,0 full size (photo shows through the transparent window).",
     "4. For each field: font = `${weight} ${size}px Sarabun`, fillStyle = color, textBaseline = 'alphabetic', textAlign = align; draw line i at y = baseline + i*lineHeight (x = x, x+width/2 or x+width by align). If the text is wider than width, wrap on spaces up to maxLines, then shrink size (keep baseline = y + round(1.08*size)) down to minSize.",
-    "Labels, logo, ABP CERTIFIED stamp, QR/barcode art and all static chrome are baked into the PNG: draw only the field values."
+    "Labels, logo, NOW I KNOW ABP stamp, QR/barcode art and all static chrome are baked into the PNG: draw only the field values."
   ],
   "notes": "QR and barcode are decorative; the QR encodes the non-URL text 'TFT-ABP-SAMPLE / DECORATIVE ONLY'. Field boxes include headroom for Thai vowel/tone marks above and descenders below the baseline.",
   "frames": [
@@ -307,7 +307,7 @@
         },
         {
           "id": "classOf",
-          "label": "ABP CERTIFIED · CLASS OF / รุ่นปี",
+          "label": "NOW I KNOW ABP · CLASS OF / รุ่นปี",
           "x": 1536,
           "y": 610,
           "width": 320,

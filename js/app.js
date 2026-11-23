@@ -75,7 +75,7 @@ function isIOS() {
 function filename() {
   const raw = (state.values.date || "card").toUpperCase();
   const slug = raw.replace(/[^A-Z0-9]+/g, "-").replace(/^-|-$/g, "");
-  return `ABP-certificate-${slug || "card"}.png`;
+  return `NOW-I-KNOW-ABP-${slug || "frame"}.png`;
 }
 
 function fieldList() {
@@ -354,7 +354,7 @@ function canvasToBlob(canvas) {
 }
 
 async function exportBlob() {
-  if (!state.ready) throw new Error("กำลังเตรียมแบบบัตร");
+  if (!state.ready) throw new Error("กำลังเตรียมกรอบรูป");
   if (!state.photo) {
     setStatus("เลือกรูปถ่ายก่อนดาวน์โหลด");
     throw new Error("missing photo");
@@ -409,8 +409,8 @@ async function shareBlob(blob) {
   if (!navigator.canShare || !navigator.canShare({ files: [file] })) return false;
   await navigator.share({
     files: [file],
-    title: "ABP Certificate",
-    text: "บัตรรับรอง ABP · THAI Flight Training",
+    title: "NOW I KNOW ABP",
+    text: "กรอบรูป NOW I KNOW ABP · THAI Flight Training",
   });
   return true;
 }
@@ -497,7 +497,7 @@ async function init() {
       };
     }
   } catch {
-    setStatus("โหลดแบบบัตรไม่สำเร็จ ลองเปิดหน้านี้ใหม่อีกครั้ง");
+    setStatus("โหลดกรอบรูปไม่สำเร็จ ลองเปิดหน้านี้ใหม่อีกครั้ง");
     downloadBtn.disabled = true;
     shareBtn.disabled = true;
   }

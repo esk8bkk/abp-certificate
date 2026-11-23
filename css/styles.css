@@ -98,6 +98,21 @@ h1 {
   color: #f0e2c0;
 }
 
+.disclaimer {
+  margin: 8px auto 0;
+  max-width: 36rem;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #f3e6c4;
+}
+
+.ticket .disclaimer {
+  margin: 0 0 10px;
+  color: var(--magenta);
+  text-align: center;
+}
+
 .privacy {
   margin: 10px auto 0;
   max-width: 36rem;

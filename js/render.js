@@ -1,4 +1,4 @@
-// Composite an ABP certificate. Drawing order is fixed by the frame spec:
+// Composite a NOW I KNOW ABP frame. Drawing order is fixed by the frame spec:
 // 1. White canvas at the frame's full size.
 // 2. Photo, object-fit cover, clipped to the rounded photo window.
 // 3. Overlay PNG at (0, 0) — labels, logo, stamp, and decorative QR stay baked in.
