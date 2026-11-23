@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<script type="module">
+import { baselineFor, drawFrame, layoutField, loadImage, whenFontsReady } from "../js/render.js";
+
+const specs = await (await fetch("../specs.json")).json();
+await whenFontsReady();
+
+async function renderFrame({ frameId, values, photoUrl, view }) {
+  const frame = specs.frames.find((item) => item.id === frameId);
+  const overlay = await loadImage(`../assets/frames/${frame.file}`);
+  const photo = photoUrl ? await loadImage(photoUrl) : null;
+  const canvas = document.createElement("canvas");
+  canvas.width = frame.width;
+  canvas.height = frame.height;
+  const ctx = canvas.getContext("2d", { alpha: false });
+  const layouts = drawFrame(ctx, { frame, overlay, photo, values, view, scale: 1 });
+  const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+  const buffer = await blob.arrayBuffer();
+  return { width: canvas.width, height: canvas.height, png: buffer, layouts };
+}
+
+window.__render = {
+  specs,
+  baselineFor,
+  layoutField,
+  renderFrame,
+  fontsReady: true,
+};
+</script>
+</body>
+</html>

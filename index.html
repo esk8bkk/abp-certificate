@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#1E0C3A">
+  <title>บัตรรับรอง ABP · THAI Flight Training</title>
+  <meta name="description" content="ทำบัตรรับรองผู้โดยสารอาสา (ABP) จากรูปถ่ายบนเครื่องคุณเอง ศูนย์ฝึกอบรมการบินไทย">
+  <link rel="icon" href="assets/tft-logo.png" type="image/png">
+  <link rel="preload" href="assets/fonts/Sarabun-ExtraBold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/Sarabun-Medium.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <div class="logo-chip">
+        <img src="assets/tft-logo.png" width="900" height="349" alt="TFT THAI Flight Training">
+      </div>
+      <h1>บัตรรับรองผู้โดยสารอาสา</h1>
+      <p class="lede">ABP Certificate · จากผู้โดยสารสู่ ABP</p>
+      <p class="privacy">รูปของคุณไม่ถูกอัปโหลด และไม่มีคุกกี้หรือการติดตาม</p>
+    </header>
+
+    <p class="section-label">เลือกแบบบัตร <span>FRAME</span></p>
+    <div class="frames" id="frames" role="radiogroup" aria-label="เลือกแบบบัตร"></div>
+
+    <div class="maker">
+      <div class="stage">
+        <div class="preview-wrap">
+          <canvas id="preview" aria-label="ตัวอย่างบัตร ABP"></canvas>
+        </div>
+        <p class="hint">ลากที่รูปบนบัตรเพื่อเลื่อน · ถ่างนิ้วหรือเลื่อนแถบเพื่อซูม</p>
+        <div class="action-bar">
+          <button id="download" type="button">ดาวน์โหลด PNG</button>
+          <button id="share" type="button">แชร์หรือบันทึก</button>
+        </div>
+      </div>
+
+      <section class="ticket" aria-label="ข้อมูลบนบัตร">
+        <label class="photo-btn" for="photo">
+          <input id="photo" type="file" accept="image/*">
+          <span class="photo-title" id="photo-title">ใส่รูปถ่าย</span>
+          <span class="photo-sub" id="photo-sub">Photo · กล้องหรือคลังภาพ</span>
+        </label>
+
+        <div class="zoom" id="zoom-row" hidden>
+          <span class="zoom-label">ซูม / Zoom</span>
+          <input id="zoom" type="range" min="1" max="3" step="0.01" value="1" aria-label="ซูมรูป">
+          <button class="reset-btn" id="reset-view" type="button">จัดใหม่</button>
+        </div>
+
+        <form id="fields" class="fields" novalidate></form>
+        <p class="status" id="status" role="status"></p>
+      </section>
+    </div>
+
+    <p class="instructor"><a href="deck/">สำหรับผู้สอน · สไลด์อบรม</a></p>
+  </div>
+
+  <div id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-card">
+      <h2 id="sheet-title">บันทึกรูปบัตร</h2>
+      <p id="sheet-help"></p>
+      <img id="sheet-img" alt="บัตร ABP ที่สร้างบนเครื่องนี้">
+      <div class="sheet-actions">
+        <a id="sheet-download" download="ABP-certificate.png">ดาวน์โหลด PNG</a>
+        <button id="sheet-share" type="button">แชร์ / บันทึกรูปภาพ</button>
+        <button id="sheet-close" type="button">ปิด</button>
+      </div>
+    </div>
+  </div>
+
+  <noscript><p class="noscript">หน้านี้ประกอบรูปบนเครื่องคุณ จึงต้องใช้ JavaScript รูปไม่ถูกอัปโหลด</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
