@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="referrer" content="no-referrer">
   <meta name="theme-color" content="#1E0C3A">
-  <title>บัตรรับรอง ABP · THAI Flight Training</title>
-  <meta name="description" content="ทำบัตรรับรองผู้โดยสารอาสา (ABP) จากรูปถ่ายบนเครื่องคุณเอง ศูนย์ฝึกอบรมการบินไทย">
+  <title>กรอบรูป NOW I KNOW ABP · THAI Flight Training</title>
+  <meta name="description" content="ทำกรอบรูป NOW I KNOW ABP จากรูปถ่ายบนเครื่องคุณเอง กิจกรรมการเรียนรู้ ไม่ใช่ใบรับรองหรือคุณวุฒิ">
+  <meta property="og:title" content="กรอบรูป NOW I KNOW ABP · THAI Flight Training">
+  <meta property="og:description" content="ทำกรอบรูป NOW I KNOW ABP จากรูปถ่ายบนเครื่องคุณเอง กิจกรรมการเรียนรู้ ไม่ใช่ใบรับรองหรือคุณวุฒิ">
   <link rel="icon" href="assets/tft-logo.png" type="image/png">
   <link rel="preload" href="assets/fonts/Sarabun-ExtraBold.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/Sarabun-Medium.ttf" as="font" type="font/ttf" crossorigin>
@@ -18,27 +20,29 @@
       <div class="logo-chip">
         <img src="assets/tft-logo.png" width="900" height="349" alt="TFT THAI Flight Training">
       </div>
-      <h1>บัตรรับรองผู้โดยสารอาสา</h1>
-      <p class="lede">ABP Certificate · จากผู้โดยสารสู่ ABP</p>
+      <h1>NOW I KNOW ABP · รู้จักบทบาทผู้โดยสารอาสาแล้ว</h1>
+      <p class="lede">รู้จักบทบาท ABP แล้ว · จากผู้โดยสารสู่ ABP</p>
+      <p class="disclaimer">กิจกรรมการเรียนรู้ ไม่ใช่ใบรับรองหรือคุณวุฒิ</p>
       <p class="privacy">รูปของคุณไม่ถูกอัปโหลด และไม่มีคุกกี้หรือการติดตาม</p>
     </header>
 
-    <p class="section-label">เลือกแบบบัตร <span>FRAME</span></p>
-    <div class="frames" id="frames" role="radiogroup" aria-label="เลือกแบบบัตร"></div>
+    <p class="section-label">เลือกกรอบรูป <span>FRAME</span></p>
+    <div class="frames" id="frames" role="radiogroup" aria-label="เลือกกรอบรูป"></div>
 
     <div class="maker">
       <div class="stage">
         <div class="preview-wrap">
-          <canvas id="preview" aria-label="ตัวอย่างบัตร ABP"></canvas>
+          <canvas id="preview" aria-label="ตัวอย่างกรอบรูป NOW I KNOW ABP"></canvas>
         </div>
-        <p class="hint">ลากที่รูปบนบัตรเพื่อเลื่อน · ถ่างนิ้วหรือเลื่อนแถบเพื่อซูม</p>
+        <p class="hint">ลากที่รูปในกรอบเพื่อเลื่อน · ถ่างนิ้วหรือเลื่อนแถบเพื่อซูม</p>
         <div class="action-bar">
           <button id="download" type="button">ดาวน์โหลด PNG</button>
           <button id="share" type="button">แชร์หรือบันทึก</button>
         </div>
       </div>
 
-      <section class="ticket" aria-label="ข้อมูลบนบัตร">
+      <section class="ticket" aria-label="ข้อมูลบนกรอบรูป">
+        <p class="disclaimer">กิจกรรมการเรียนรู้ ไม่ใช่ใบรับรองหรือคุณวุฒิ</p>
         <label class="photo-btn" for="photo">
           <input id="photo" type="file" accept="image/*">
           <span class="photo-title" id="photo-title">ใส่รูปถ่าย</span>
@@ -61,11 +65,11 @@
 
   <div id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-title">
     <div class="sheet-card">
-      <h2 id="sheet-title">บันทึกรูปบัตร</h2>
+      <h2 id="sheet-title">บันทึกกรอบรูป</h2>
       <p id="sheet-help"></p>
-      <img id="sheet-img" alt="บัตร ABP ที่สร้างบนเครื่องนี้">
+      <img id="sheet-img" alt="กรอบรูป NOW I KNOW ABP ที่สร้างบนเครื่องนี้">
       <div class="sheet-actions">
-        <a id="sheet-download" download="ABP-certificate.png">ดาวน์โหลด PNG</a>
+        <a id="sheet-download" download="NOW-I-KNOW-ABP.png">ดาวน์โหลด PNG</a>
         <button id="sheet-share" type="button">แชร์ / บันทึกรูปภาพ</button>
         <button id="sheet-close" type="button">ปิด</button>
       </div>

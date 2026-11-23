@@ -1,4 +1,4 @@
-// Headless check for the static ABP certificate page.
+// Headless check for the static NOW I KNOW ABP frame page.
 // Usage: node tests/check.mjs <artifact-dir> <mockup-dir>
 import { spawn } from "node:child_process";
 import { mkdir, writeFile } from "node:fs/promises";
@@ -187,7 +187,7 @@ async function main() {
     await page.screenshot({ path: path.join(artifactDir, "ui-phone-save.png") });
 
     if (external.length) {
-      throw new Error(`certificate page requested external hosts: ${external.join(", ")}`);
+      throw new Error(`frame page requested external hosts: ${external.join(", ")}`);
     }
 
     const deckPage = await browser.newPage();

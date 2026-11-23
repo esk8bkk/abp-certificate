@@ -1,6 +1,6 @@
-# บัตรรับรอง ABP · THAI Flight Training
+# กรอบรูป NOW I KNOW ABP · THAI Flight Training
 
-Static site for the university cabin-safety class. Students open it from a QR code, drop their photo into a boarding-pass frame, and save an ABP certificate (Able-Bodied Passenger / ผู้โดยสารอาสา). The photo never leaves the phone.
+Static site for the university cabin-safety class. Students open it from a QR code, drop their photo into a boarding-pass frame, and save a "NOW I KNOW ABP" picture (Able-Bodied Passenger / ผู้โดยสารอาสา). It is a class activity, not a qualification. The photo never leaves the phone.
 
 GitHub Pages: branch `main`, folder `/` (repository root). No build step. [`.nojekyll`](.nojekyll) is included so Pages serves the font files and the deck as-is.
 
@@ -30,4 +30,4 @@ On iPhone Safari the download attribute is unreliable. The page opens the image 
 
 ## Instructor deck
 
-`deck/index.html` is the original self-contained deck. It is not rewritten by this site. The deck itself links to YouTube and loads Sarabun from Google Fonts; the certificate page does not.
+`deck/index.html` is the instructor deck. It links to YouTube and loads Sarabun from Google Fonts; the frame page does not.
